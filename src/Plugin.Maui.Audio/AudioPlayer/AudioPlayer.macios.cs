@@ -80,11 +80,13 @@ partial class AudioPlayer : IAudioPlayer
 
 		PreparePlayer();
 	}
+
     public void Play()
     {
         if (player.Playing)
         {
             player.Pause();
+			Seek(0);
         }
         else
         {
